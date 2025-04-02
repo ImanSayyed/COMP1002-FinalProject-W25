@@ -1,0 +1,64 @@
+/* Basic styles for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px; /* Set the font size to 12px */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+#global-header {
+    background-color: #333; /* Set background color for header */
+    padding: 10px;
+}
+
+/* Navigation menu inside the header */
+#global-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#global-header nav ul li {
+    display: inline; /* Display items horizontally */
+    margin-right: 20px;
+}
+
+#global-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+#global-header nav ul li a:hover {
+    background-color: #555; /* Hover effect for links */
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Hero section with the main heading */
+.hero {
+    text-align: center;
+}
+
+/* Style for the main heading in the hero section */
+.hero h1 {
+    font-size: 29px;
+}
+
+/* Style for the secondary heading */
+h2 {
+    font-size: 25px;
+}
+
+/* Footer styles */
+#global-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
