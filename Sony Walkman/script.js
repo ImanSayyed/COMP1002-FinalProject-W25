@@ -1,7 +1,8 @@
-// Global Header and Footer
-document.addEventListener('DOMContentLoaded', function () {
-    // Global Header
-    const header = document.getElementById('global-header');
+// header-footer.js
+document.addEventListener("DOMContentLoaded", function () {
+    // Create and insert header
+    const header = document.createElement("header");
+    header.id = "global-header";
     header.innerHTML = `
         <nav>
             <ul>
@@ -12,12 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
             </ul>
         </nav>
     `;
+    document.body.insertBefore(header, document.body.firstChild);
 
-    // Global Footer
-    const footer = document.getElementById('global-footer');
+    // Create and insert footer
+    const footer = document.createElement("footer");
+    footer.id = "global-footer";
     footer.innerHTML = `
-        <p>&copy; 2025 Retro Walkman. All Rights Reserved.</p>
+        <p>&copy; 1981 Sony Corporation - Experience Music Like Never Before</p>
     `;
+    document.body.appendChild(footer);
+});
 
     // Form Validation for Contact Page
     const contactForm = document.querySelector('form');
@@ -55,4 +60,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});
+;

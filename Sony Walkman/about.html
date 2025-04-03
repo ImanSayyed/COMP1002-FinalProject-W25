@@ -4,30 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>About - Sony Walkman</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header id="global-header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
+        <img src="images/Sony-logo.jpg" alt="Sony Logo" width="100" class="sony-logo">
         <section class="about">
-            <h1>About Sony Walkman</h1>
-            <p>The Sony Walkman revolutionized portable music in 1979, allowing users to enjoy their favorite tunes anywhere. Developed by Sony, this compact cassette player became an iconic symbol of the 80s and 90s.</p>
-            <p>It enabled people to create soundtracks to their lives in ways that hadn't been possible before. The fact that you could use your Walkman anywhere changed that; music had never been so personal.</p>
-            <p>It was the first in a long line of portable audio players, and without it, we might not have the same objects such as iPods and MP3 players that we do today.</p>
-            <img src="/images/History-of-Walkman.jpg" alt="History of Sony Walkman">
+            <h1>Sony Walkman</h1>
+            <p>Sony Corporation has revolutionized personal audio once again with the release of the Walkman WM-2 in 1981.
+                Building upon the success of the original Walkman, 
+                this new model is sleeker, lighter, and delivers high-fidelity stereo sound.
+            </p>
+            <img src="images/walkman.jpg" alt="TPS-L2 Walkman" width="400" class="about-image">
+            <h3>Walkman Timeline</h3>
+            <ul>
+                <li class="timeline-item">
+                    <img src="images/tc50.jpg" alt="Sony TC-50">
+                    <span>1965 - Sony introduces their one of a kind portable cassette recorder (TC-50) </span>
+                </li>
+                <li class="timeline-item">
+                    <img src="images/tc-2850sd.jpg" alt="Sony TC-2850SD">
+                    <span>1971 - Sony introduces the worlds first stereo cassette recorder (TC-2850SD) </span>
+                </li>
+                <li class="timeline-item">
+                    <img src="images/TPSL2.jpg" alt="TPS-L2 Walkman">
+                    <span>1979 - Sony introduces the first Walkman (TPS-L2)</span>
+                </li>
+                <li class="timeline-item">
+                    <img src="images/WM2.jpg" alt="WM-2 Walkman">
+                    <span>1981 - Sony releases the new and improved Walkman WM-2</span>
+                </li>
+            </ul>
         </section>
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+          </div>
     </main>
-    <footer id="global-footer"></footer>
 </body>
 </html>
