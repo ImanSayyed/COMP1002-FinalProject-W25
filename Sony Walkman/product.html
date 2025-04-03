@@ -12,20 +12,109 @@
     <main>
         <img src="images/Sony-logo.jpg" alt="Sony Logo" width="100" class="sony-logo">
         <section class="product">
-            <h1>Classic Sony Walkman</h1>
-            <img src="/images/Walkman-Product.jpg" alt="Walkman Product">
+            <h1>Sony WM-2</h1>
+            <img src="images/multiple-wm2.jpg" alt="Walkman Product">
             <p>The Sony Walkman WM-2 features a lightweight design, improved cassette playback, and a stylish aluminum body. Enjoy private listening with the included stereo headphones and experience music in a whole new way!</p>
             <p>This music player brings you the forward from the days of large steroes and gives you the freedom to listen to your favorite tunes on the go.
                  Perfect for collectors or music enthusiasts who appreciate a classy & sleek design</p>
-            <h2>Why Sony and Why Walkman?</h2>
+            <h2>Why Sony and Why the WM-2?</h2>
             <ul>
                 <li>Portable and lightweight design</li>
                 <li>Compatible with cassette tapes</li>
-                <li>3.5mm Jack for headphones (sold seperately)</li>
+                <li>High-quality sound with stereo output</li>
+                <li>Stylish aluminum body</li>
+                <li>Easy-to-use controls</li>
+                <li>Long battery life</li>
+                <li>Includes a pair of MDR-3L2 headphones</li>
                 <li>Available in various colors</li>
             </ul>
-            <button>Buy Now</button>
+            <img src="images/mdr-3l2.jpg" alt="MDR-3L2 Headphones" class="about-image"><br>
+            <button>Buy Now!</button>
         </section>
     </main>
+
+    <!-- Buy Now Modal -->
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Purchase Your WM-2 Walkman</h2>
+            
+            <form id="orderForm">
+                <!-- Personal Info -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postal">Postal Code</label>
+                        <input type="text" id="postal" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" required>
+                        <option value="">Select...</option>
+                        <option value="CA">Canada</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="JP">Japan</option>
+                    </select>
+                </div>
+                
+                <!-- Payment Info -->
+                <div class="form-group">
+                    <label for="card">Card Number</label>
+                    <input type="text" id="card" placeholder="1234 5678 9012 3456">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                </div>
+                
+                <!-- Quantity & Price -->
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <select id="quantity" required>
+                        <option value="1">1 x $129.99</option>
+                        <option value="2">2 x $259.98</option>
+                        <option value="3">3 x $389.97</option>
+                    </select>
+                </div>
+                
+                <div class="price-display">
+                    Total: <span id="totalPrice">$129.99</span>
+                    <span id="shippingNote">+ $10.99 shipping</span>
+                </div>
+                
+                <button type="submit">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>

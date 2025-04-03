@@ -1,4 +1,3 @@
-// header-footer.js
 document.addEventListener("DOMContentLoaded", function () {
     // Create and insert header
     const header = document.createElement("header");
@@ -22,6 +21,59 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>&copy; 1981 Sony Corporation - Experience Music Like Never Before</p>
     `;
     document.body.appendChild(footer);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get modal elements
+    const modal = document.getElementById("buyModal");
+    const buyBtn = document.querySelector(".product button");
+    const closeBtn = document.querySelector(".close");
+    const form = document.getElementById("orderForm");
+  
+    // Open modal when "Buy Now" is clicked
+    buyBtn.addEventListener('click', function() {
+      modal.style.display = "block";
+    });
+  
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
+  
+    // Close modal when clicking outside
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  
+    // Form submission
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Order submitted! Thank you for your purchase!");
+      modal.style.display = "none";
+      form.reset();
+    });
+  });
+
+  // Product Price Calculation
+  // This script calculates the total price based on the selected quantity
+  document.addEventListener('DOMContentLoaded', function() {
+    const quantitySelect = document.getElementById('quantity');
+    const totalPriceSpan = document.getElementById('totalPrice');
+    const shippingCost = 10.99;
+    const unitPrice = 129.99;
+    // The function to update the total price based on the selected quantity
+    function updatePrice() {
+        const selectedQuantity = parseInt(quantitySelect.value);
+        const totalCost = (unitPrice * selectedQuantity) + shippingCost;
+        totalPriceSpan.textContent = `$${totalCost.toFixed(2)}`;
+    }
+    // Add event listener to the quantity select element, this will trigger the updatePrice function whenever the quantity is changed
+    if (quantitySelect) {
+        quantitySelect.addEventListener('change', updatePrice);
+        updatePrice(); // Set initial price on load
+    }
 });
 
     // Form Validation for Contact Page
