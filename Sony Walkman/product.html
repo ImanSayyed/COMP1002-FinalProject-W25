@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <title>Product - Retro Walkman</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    
+    <!-- Linking CSS and JavaScript -->
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for styling -->
+    <script defer src="script.js"></script> <!-- External JavaScript file, loaded after HTML is parsed -->
 </head>
 <body>
     <main>
+        <!-- Sony Logo -->
         <img src="images/Sony-logo.jpg" alt="Sony Logo" class="sony-logo">
+        
+        <!-- Product Description Section -->
         <section class="product">
             <h1>Sony WM-2</h1>
             <img src="images/multiple-wm2.jpg" alt="Walkman Product" class="product-image">
+            
+            <!-- Product Details -->
             <p>The Sony Walkman WM-2 features a lightweight design, improved cassette playback, and a stylish aluminum body. 
                 Enjoy private listening with the included stereo headphones and experience music in a whole new way!</p>
-            <p>This music player brings you the forward from the days of large steroes and gives you the freedom to listen to your favorite tunes on the go.
-                 Perfect for collectors or music enthusiasts who appreciate a classy & sleek design</p>
+            <p>This music player brings you forward from the days of large stereos and gives you the freedom to listen to your favorite tunes on the go.
+                Perfect for collectors or music enthusiasts who appreciate a classy & sleek design.</p>
+            
+            <!-- Product Features -->
             <h2>Why Sony and Why the WM-2?</h2>
             <ul>
                 <li>Portable and lightweight design</li>
@@ -29,19 +39,26 @@
                 <li>Includes a pair of MDR-3L2 headphones</li>
                 <li>Available in various colors</li>
             </ul>
+            
+            <!-- Image of the included headphones -->
             <img src="images/mdr-3l2.jpg" alt="MDR-3L2 Headphones" class="about-image"><br>
-            <button>Buy Now!</button>
+            
+            <!-- Button to Open the Purchase Modal -->
+            <button id="openModal">Buy Now!</button>
         </section>
     </main>
 
     <!-- Buy Now Modal -->
     <div id="buyModal" class="modal">
         <div class="modal-content">
+            <!-- Close Button -->
             <span class="close">&times;</span>
             <h2>Purchase Your WM-2 Walkman</h2>
             
+            <!-- Order Form -->
             <form id="orderForm">
-                <!-- Personal Info -->
+                
+                <!-- Personal Information -->
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" required>
@@ -52,7 +69,7 @@
                     <input type="email" id="email" required>
                 </div>
                 
-                <!-- Address -->
+                <!-- Address Fields -->
                 <div class="form-group">
                     <label for="address">Street Address</label>
                     <input type="text" id="address" required>
@@ -80,7 +97,7 @@
                     </select>
                 </div>
                 
-                <!-- Payment Info -->
+                <!-- Payment Information -->
                 <div class="form-group">
                     <label for="card">Card Number</label>
                     <input type="text" id="card" placeholder="1234 5678 9012 3456">
@@ -97,26 +114,27 @@
                     </div>
                 </div>
                 
-                <!-- Quantity & Price -->
+                <!-- Quantity Selection and Price Calculation -->
                 <div class="form-group">
                     <label for="quantity">Quantity</label>
                     <select id="quantity" required>
-                        <option value = "" disabled selected>Select #</option>
-                        <option value = "1">1 x $129.99</option>
-                        <option value = "2">2 x $259.98</option>
-                        <option value = "3">3 x $389.97</option>
+                        <option value="" disabled selected>Select #</option>
+                        <option value="1">1 x $129.99</option>
+                        <option value="2">2 x $259.98</option>
+                        <option value="3">3 x $389.97</option>
                     </select>
                 </div>
                 
+                <!-- Display Total Price -->
                 <div class="price-display">
                     Total: <span id="totalPrice">$129.99</span>
                     <span id="shippingNote">+ $10.99 shipping</span>
                 </div>
                 
+                <!-- Submit Button for Order Completion -->
                 <button type="submit">Complete Purchase</button>
             </form>
         </div>
     </div>
-
 </body>
 </html>
